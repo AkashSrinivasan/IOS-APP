@@ -1,0 +1,22 @@
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var gradientView: UIView!
+    
+override func viewDidLoad() {
+        super.viewDidLoad()
+        gardient()
+        }
+        
+        
+func gardient(){
+        let gradient = CAGradientLayer()
+        let colorTop =  UIColor(red: 29.0/255.0, green: 164.0/255.0, blue: 222.0/255.0, alpha: 1.0).cgColor
+        let colorBottom = UIColor(red: 4.0/255.0, green: 53.0/255.0, blue: 97.0/255.0, alpha: 1.0).cgColor
+
+        gradient.frame = gradientView.bounds
+        gradient.colors = [colorTop, colorBottom]
+        gradientView.layer.insertSublayer(gradient, at: 0)
+            
+        }
