@@ -1,0 +1,23 @@
+
+This function will popup the alert button if the function is in valid
+/*------------------------------------------------------------------*/
+@IBAction func actionButton(_ sender: Any) {
+        let providedEmailAdress = emailTextField.text
+        let providedPAssword = passwodField.text
+        let isEmailAddressValid = isValidEmailAddress(emailAddressString:providedEmailAdress!)
+        _ = isValidPassword(testStr:providedPAssword!)
+        if emailTextField.text  ==  "" {
+            alertButton(messageToDisplay:"enter the email")
+        }else if isEmailAddressValid == false{
+            alertButton(messageToDisplay:"invalid email adress")
+        }
+        else if passwodField.text == "" {
+            alertButton(messageToDisplay:"enter the password")
+        }
+        else{
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "secondViewController") as! secondViewController
+            self.navigationController?.pushViewController(newViewController, animated: true)
+        }
+    }
