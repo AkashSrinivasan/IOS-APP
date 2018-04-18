@@ -1,0 +1,10 @@
+@IBAction func checkBox(_ sender: Any) {
+
+        if checkbox.tag == 100 {
+            checkbox.setImage(UIImage(named:"checkedbox"), for: .normal)
+            checkbox.tag = 200
+        }else if checkbox.tag == 200 {
+            checkbox.setImage(UIImage(named:"uncheckedbox"), for: .normal)
+            checkbox.tag = 100
+        }
+    }
