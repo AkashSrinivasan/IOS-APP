@@ -1,4 +1,17 @@
-@IBAction func checkBox(_ sender: Any) {
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var checkbox: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        checkbox.tag = 100
+    }
+    
+    @IBAction func checkBox(_ sender: Any) {
 
         if checkbox.tag == 100 {
             checkbox.setImage(UIImage(named:"checkedbox"), for: .normal)
