@@ -1,0 +1,25 @@
+import UIKit
+
+class foodViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource {
+    
+    @IBOutlet weak var topView: UIView!
+    let items = ["Margarita", "BBQ Chicken", "Pepperoni",
+                 "sausage", "meat lovers", "veggie lovers",
+                 "sausage", "chicken pesto", "prawns", "mushrooms"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell") as! foodTableViewCell
+//        let selectedarray = items[indexPath.row]
+        cell.foodLabel.text = items[indexPath.row]
+        return cell
+    }  
+}
