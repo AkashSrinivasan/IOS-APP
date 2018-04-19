@@ -1,0 +1,21 @@
+import UIKit
+
+class foodViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate{
+    
+    let array = ["baby","elephant","forest tiger","lion","tiger","zebra","baby","elephant","forest tiger","lion","tiger","zebra"]
+    override func viewDidLoad() {
+        super.viewDidLoad()    
+    }
+    
+   
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return array.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "listCell", for: indexPath) as! listCollectionViewCell
+        cell.myLabel.text = array[indexPath.row].capitalized
+        return cell
+    }
+   
+}
