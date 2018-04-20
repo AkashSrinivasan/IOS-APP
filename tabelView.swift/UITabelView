@@ -1,6 +1,6 @@
 import UIKit
 
-class foodViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDelegate,UITableViewDataSource {
+class foodViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var topView: UIView!
     let items = ["Margarita", "BBQ Chicken", "Pepperoni",
