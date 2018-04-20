@@ -1,0 +1,31 @@
+
+import UIKit
+
+class scrollViewController: UIViewController {
+
+    @IBOutlet weak var myScrollView: UIScrollView!
+    var myView : UIView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        myScrollView.isScrollEnabled = true
+        myScrollView.isUserInteractionEnabled = true
+        
+     let numberOfButton = 40
+    
+        var count = 0
+        var xx = 0
+        var yy = 0
+        
+        for _ in 0 ..< numberOfButton {
+            let button = UIButton()
+            button.setTitle("BUTTON", for: .normal)
+            button.setTitleColor(UIColor.white, for: .normal)
+            button.backgroundColor = UIColor.black
+            button.frame = CGRect(x: 0, y: yy, width: 375, height: 45)
+            yy = yy + 50
+            myScrollView.addSubview(button)
+        }
+        myScrollView.contentSize = CGSize(width: 375, height: yy)
+    }
+}
