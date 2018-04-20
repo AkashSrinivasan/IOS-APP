@@ -1,0 +1,56 @@
+import UIKit
+
+class secondViewController: UIViewController,UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource{
+    
+  
+    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var txtField: UITextField!
+    let pickerData = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6"]
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        txtField.delegate = self 
+        self.txtField.tintColor = UIColor.clear
+     
+    }
+    
+    @objc func buttonSelected(sender:UIButton){
+       let buttonTag = sender.tag
+       print(buttonTag)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    
+    @IBAction func backbutton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+   
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        txtField.text = pickerData[row]
+    }
+    @IBAction func DoneButton(_ sender: Any) {
+        view2.isHidden = true
+        txtField.endEditing(true)
+    }
+    
+    
+     @IBAction func CancelButton(_ sender: Any) {
+          txtField.text = ""
+          view2.isHidden = true
+     }
+    }
