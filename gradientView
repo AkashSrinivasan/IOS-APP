@@ -1,3 +1,8 @@
+
+This func is used for gradient view 
+
+
+
 import UIKit
 
 class ViewController: UIViewController {
