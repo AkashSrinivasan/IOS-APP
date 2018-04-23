@@ -1,6 +1,7 @@
 import UIKit
 
 class listCollectionViewCell: UICollectionViewCell {
+
     
     @IBOutlet weak var myLabel: UILabel!
 }
