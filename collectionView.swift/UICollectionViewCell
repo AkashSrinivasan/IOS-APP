@@ -1,7 +1,6 @@
 import UIKit
 
 class listCollectionViewCell: UICollectionViewCell {
-
-    Bullut button 
+I
     @IBOutlet weak var myLabel: UILabel!
 }
