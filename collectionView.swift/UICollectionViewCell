@@ -4,6 +4,5 @@ class listCollectionViewCell: UICollectionViewCell {
 I
     @IBOutlet weak var myLabel: UILabel!
     
-    
-    
+    U 
 }
