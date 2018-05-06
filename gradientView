@@ -24,4 +24,6 @@ func gardient(){
         gradient.colors = [colorTop, colorBottom]
         gradientView.layer.insertSublayer(gradient, at: 0)
             
+            
+            
         }
