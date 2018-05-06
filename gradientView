@@ -25,5 +25,5 @@ func gardient(){
         gradientView.layer.insertSublayer(gradient, at: 0)
             
            
-            
+           
         }
