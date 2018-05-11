@@ -4,8 +4,6 @@ This function will popup the alert button if the function is in valid
 @IBAction func actionButton(_ sender: Any) {
         let providedEmailAdress = emailTextField.text
         let providedPAssword = passwodField.text
-        
-        
         let isEmailAddressValid = isValidEmailAddress(emailAddressString:providedEmailAdress!)
         _ = isValidPassword(testStr:providedPAssword!)
         if emailTextField.text  ==  "" {
