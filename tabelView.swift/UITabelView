@@ -18,7 +18,7 @@ class foodViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell") as! foodTableViewCell
-//        let selectedarray = items[indexPath.row]
+
         cell.foodLabel.text = items[indexPath.row]
         return cell
     }  
