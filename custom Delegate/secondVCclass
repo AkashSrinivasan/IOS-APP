@@ -1,0 +1,34 @@
+//
+//  secondVC.swift
+//  CustomDelegate
+//
+//  Created by Influx on 16/05/18.
+//  Copyright © 2018 Influx. All rights reserved.
+//
+
+import UIKit
+protocol dataSendDelegate{
+    func userEnteredData(data:String)
+}
+
+class secondVC: UIViewController {
+
+    @IBOutlet weak var textField: UITextField!
+    var delegate: dataSendDelegate? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func sendButton(_ sender: Any) {
+        if delegate != nil{
+            if textField.text != nil{
+                let data = textField.text
+                delegate?.userEnteredData(data: data!)
+                dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+}
