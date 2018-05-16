@@ -1,0 +1,30 @@
+//
+//  ViewController.swift
+//  CustomDelegate
+//
+//  Created by Influx on 16/05/18.
+//  Copyright © 2018 Influx. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController,dataSendDelegate {
+   
+    @IBOutlet weak var getLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    func userEnteredData(data: String) {
+        getLabel.text = data
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSendingVc"{
+            let secondVC: secondVC = (segue.destination as?secondVC)!
+        secondVC.delegate = self
+        }
+
+    }
+
+}
