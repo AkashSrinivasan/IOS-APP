@@ -24,7 +24,7 @@ class secondVC: UIViewController {
 
     @IBAction func sendButton(_ sender: Any) {
         if delegate != nil{
-            if textField.text != nil{
+            if !((textField.text?.isEmpty)!){
                 let data = textField.text
                 delegate?.userEnteredData(data: data!)
                 dismiss(animated: true, completion: nil)
