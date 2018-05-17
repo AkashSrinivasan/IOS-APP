@@ -1,0 +1,42 @@
+//
+//  firstViewController.swift
+//  CustomDelegate
+//
+//  Created by Influx on 17/05/18.
+//  Copyright © 2018 Influx. All rights reserved.
+//
+
+import UIKit
+
+class firstViewController: UIViewController {
+
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myImage: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(setTo1(notification:)), name: .set1, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setTo2(notification:)), name: .set2, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(set1(notification:)), name: NSNotification.Name(rawValue: "set1"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: "setTo1:", name: NSNotification.Name(rawValue: "set1ToID") , object: nil)
+//        NotificationCenter.default.addObserver(self, selector: "set2:", name: NSNotification.Name(rawValue: "set2ID"), object: nil)
+    }
+
+    @objc func setTo2(notification: NSNotification){
+        myLabel.text = "nature2"
+        myImage.image = UIImage(named: "image2.png")
+        
+
+        
+    }
+    @objc func setTo1(notification: NSNotification){
+        myLabel.text = "nature1"
+        myImage.image = UIImage(named: "image1.png")
+    }
+}
+extension Notification.Name {
+    
+    static let set1 = Notification.Name("set1")
+    static let set2 = Notification.Name("set2")
+    
+}
