@@ -14,7 +14,6 @@ class googleMapViewController: UIViewController {
         mapView.settings.zoomGestures = true
         view = mapView
         
-        // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: 13.122695, longitude:  80.233025)
         marker.title = "HOME"
