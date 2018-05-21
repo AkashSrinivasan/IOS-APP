@@ -9,3 +9,8 @@ Syntax
    (parameters) −> return type in
    statements
 }
+
+
+
+
+Here, $0 and $1 refer to the closure's first and second String arguments.
