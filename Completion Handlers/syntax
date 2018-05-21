@@ -1,0 +1,9 @@
+1. it is a func that makes a func as a parameter
+
+2. type:
+    func fname(pname : () -> () ) 
+      { code }
+      
+      
+3.syntax:
+    {() in fname()}
