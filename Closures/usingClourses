@@ -1,0 +1,26 @@
+//
+//  cloursesViewController.swift
+//  CustomDelegate
+//
+//  Created by Influx on 21/05/18.
+//  Copyright © 2018 Influx. All rights reserved.
+//
+
+import UIKit
+
+class cloursesViewController: UIViewController {
+
+    @IBOutlet weak var power: UITextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let sub = {(n1: Int,n2: Int)->Int in
+            return n1-n2
+        }
+        let kmn = sub(7,8)
+        power.text = "\(kmn)"
+        power.textColor = UIColor.black
+        
+   
+    }
+
+}
