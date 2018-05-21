@@ -20,6 +20,13 @@ class cloursesViewController: UIViewController {
         power.text = "\(kmn)"
         power.textColor = UIColor.black
         
+        
+        let fun = [1,2,3,4,5]
+        var str = fun.map{"\($0)"}
+        base.textColor = UIColor.blue
+        base.text = "\(str)"
+        
+   
    
     }
 
