@@ -1,5 +1,6 @@
 1.Closures in Swift 4 are similar to that of self-contained functions organized as blocks 
   and called anywhere like C and Objective C languages. 
+  
 2.Constants and variable references defined inside the functions are captured and stored in closures.
 3.make it shoter -----> Closures
 4.no func keyword and no name
