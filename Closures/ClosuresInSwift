@@ -2,6 +2,7 @@
   and called anywhere like C and Objective C languages. 
   
 2.Constants and variable references defined inside the functions are captured and stored in closures.
+
 3.make it shoter -----> Closures
 4.no func keyword and no name
 
