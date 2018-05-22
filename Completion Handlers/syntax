@@ -6,7 +6,9 @@
       
       
 3.syntax:
-    {() in fname()}
+    {() in 
+    fname()
+    }
     
     
     
