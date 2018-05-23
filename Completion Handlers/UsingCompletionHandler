@@ -1,0 +1,51 @@
+//
+//  compViewController.swift
+//  CustomDelegate
+//
+//  Created by Influx on 21/05/18.
+//  Copyright © 2018 Influx. All rights reserved.
+//
+
+import UIKit
+
+class compViewController: UIViewController {
+
+    @IBOutlet weak var base: UITextField!
+    @IBOutlet weak var power: UITextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let sub = {(n1: Int,n2: Int)->Int in
+            return n1-n2
+        }
+        let kmn = sub(7,8)
+        power.text = "\(kmn)"
+        power.textColor = UIColor.black
+        let fun = [1,2,3,4,5]
+        var str = fun.map{"\($0)"}
+        base.textColor = UIColor.blue
+        base.text = "\(str)"
+        computeValue(start: 1, completion: completionHandler)
+
+        //        let power = sub(3,7)
+////        print(deg)
+        
+        
+
+        // Do any additional setup after loading the view.
+    }
+    func completionHandler(value: Int) {
+        print("Function completion handler value: \(value)")
+    }
+    
+    // The computation function
+    func computeValue(start: Int, completion: (Int) -> Void) {
+        
+        var start = start
+        for _ in 1...3 {
+            start += 1
+        }
+        completion(start) // completion -> completionHandler(value: Int) -> Void
+        print("dsfgdf")
+    }
+
+}
