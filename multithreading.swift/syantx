@@ -1,0 +1,15 @@
+****syantx****
+
+
+DispatchQueue.global(qos: .userInitiated).async {  
+      	// Download file or perform expensive task
+      	//DispatchQueue.global - send to the task to the background for process
+      	//qos - Quality-of-Service(Attribute)
+      	//userInitiated - highest priority
+     		 background - lowest priority
+    	//async - process many tasl ath the same time
+      		sync - process one task still that tasl get complet's
+    DispatchQueue.main.async {  
+        // Update the task to main thread  
+    }
+}
