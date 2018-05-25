@@ -1,8 +1,9 @@
 ****syantx****
-
+using withmultithread.....
 
 DispatchQueue.global(qos: .userInitiated).async {  
       	// Download file or perform expensive task
+           
       	//DispatchQueue.global - send to the task to the background for process
       	//qos - Quality-of-Service(Attribute)
       	//userInitiated - highest priority
