@@ -6,7 +6,7 @@ This function will popup the alert button if the function is in valid
         let providedPAssword = passwodField.text
         let isEmailAddressValid = isValidEmailAddress(emailAddressString:providedEmailAdress!)
         _ = isValidPassword(testStr:providedPAssword!)
-        if emailTextField.text  ==  "" {
+        if emailTextField.text  ==  " " {
             alertButton(messageToDisplay:"enter the email")
         }else if isEmailAddressValid == false{
             alertButton(messageToDisplay:"invalid email adress")
