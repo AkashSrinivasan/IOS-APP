@@ -28,5 +28,5 @@
         An object that provides response metadata, such as HTTP headers and status code. If you are making an HTTP or HTTPS request, the returned object is actually an HTTPURLResponse object.
    
    
-   error:
+  ** error:
         An error object that indicates why the request failed, or nil if the request was successful.
