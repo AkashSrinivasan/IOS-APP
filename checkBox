@@ -9,7 +9,6 @@ class ViewController: UIViewController {
         checkbox.tag = 100
     }
     
-    
     @IBAction func checkBox(_ sender: Any) {
 
         if checkbox.tag == 100 {
