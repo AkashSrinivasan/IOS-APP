@@ -11,6 +11,7 @@ class dateViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         
+        
         formatter.timeStyle = .medium
         let str = formatter.string(from: Date())
         date.text = str
