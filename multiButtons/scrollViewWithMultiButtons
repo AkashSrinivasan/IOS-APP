@@ -27,6 +27,7 @@ class scrollViewController: UIViewController {
             yy = yy + 50
             myScrollView.addSubview(button)
         }
+        
         myScrollView.contentSize = CGSize(width: 375, height: yy)
     }
 }
