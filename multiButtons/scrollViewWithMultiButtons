@@ -8,7 +8,6 @@ class scrollViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         myScrollView.isScrollEnabled = true
         myScrollView.isUserInteractionEnabled = true
         
