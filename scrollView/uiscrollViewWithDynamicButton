@@ -16,7 +16,7 @@ class scrollViewController: UIViewController {
         var count = 0
         var xx = 0
         var yy = 0
-        http://tamilrockers.gs/index.php/topic/70133-irumbu-thirai-2018tamil-hdrip-xvid-mp3-700mb/
+       
         for _ in 0 ..< numberOfButton {
             let button = UIButton()
             button.setTitle("BUTTON", for: .normal)
