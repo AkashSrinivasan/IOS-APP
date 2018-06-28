@@ -11,6 +11,7 @@ class scrollViewController: UIViewController {
         myScrollView.isScrollEnabled = true
         myScrollView.isUserInteractionEnabled = true
         
+        
      let numberOfButton = 40
     
         var count = 0
