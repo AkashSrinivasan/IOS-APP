@@ -9,8 +9,7 @@ class scrollViewController: UIViewController {
         super.viewDidLoad()
         
         myScrollView.isScrollEnabled = true
-        myScrollView.isUserInteractionEnabled = true
-        
+        myScrollView.isUserInteractionEnabled = true        
         
      let numberOfButton = 40
     
